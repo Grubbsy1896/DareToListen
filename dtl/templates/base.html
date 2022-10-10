@@ -1,0 +1,25 @@
+{# Load the tag library #}
+{#% load bootstrap5 %#}
+
+{# Load CSS and JavaScript #}
+{# % bootstrap_css % #}
+{# % bootstrap_javascript % #}
+
+{# Display django.contrib.messages as Bootstrap alerts #}
+{#% bootstrap_messages %#}
+
+{% load static %}
+<link rel="stylesheet" type="text/css" href="{% static 'bootstrap.min.css' %}" />
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"></script>
+
+
+
+<body>
+    <nav class="navbar navbar-expand navbar-dark bg-primary">
+        <div class="container-fluid">
+            <a class="navbar-brand mg-left" href="{% url 'index' %}">    DTL</a>
+        </div>
+    </nav>
+</body>
+
+{% block content %}{% endblock %}
